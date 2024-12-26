@@ -21,7 +21,7 @@ function App() {
 
 
   function auth() {
-    fetch('http://localhost:3000/users/me', {
+    fetch('http://158.160.23.164:3000/users/me', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function App() {
   }
 
   function handleLogin(email, password) {
-    fetch('http://localhost:3000/signin', {
+    fetch('http://158.160.23.164:3000/signin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function App() {
       .then((res) => {
         localStorage.setItem('jwt', res.token)
         localStorage.setItem('logged', true)
-        fetch('http://localhost:3000/users/me', {
+        fetch('http://158.160.23.164:3000/users/me', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ function App() {
   }
 
   function handleUpdateName(name) {
-    fetch('http://localhost:3000/users/me/name', {
+    fetch('http://158.160.23.164:3000/users/me/name', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ function App() {
   }
 
   function handleUpdateTg(tg) {
-    fetch('http://localhost:3000/users/me/tg', {
+    fetch('http://158.160.23.164:3000/users/me/tg', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ function App() {
 
   React.useEffect(() => {
     localStorage.getItem('jwt') != null ?
-      fetch('http://localhost:3000/users/me', {
+      fetch('http://158.160.23.164:3000/users/me', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ function App() {
 
   function addToCart(article, name, brand, size, price, thumbnail) {
     console.log('sss')
-    fetch(`http://localhost:3000/cart/${article}`, {
+    fetch(`http://158.160.23.164:3000/cart/${article}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ function App() {
   }
 
   function removeFromCart(art) {
-    fetch(`http://localhost:3000/cart/${art}`, {
+    fetch(`http://158.160.23.164:3000/cart/${art}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ function App() {
   function addCountToCart(art, size, e) {
     console.log(art)
     console.log(size)
-    fetch(`http://localhost:3000/cart/${art}`, {
+    fetch(`http://158.160.23.164:3000/cart/${art}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -238,7 +238,7 @@ function App() {
   }
 
   function removeCountFromCart(art, e) {
-    fetch(`http://localhost:3000/cart/${art}`, {
+    fetch(`http://158.160.23.164:3000/cart/${art}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -261,7 +261,7 @@ function App() {
   }
 
   function cleanCart() {
-    fetch(`http://localhost:3000/cart/`, {
+    fetch(`http://158.160.23.164:3000/cart/`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -283,7 +283,7 @@ function App() {
   }
 
   function getCart() {
-    fetch(`http://localhost:3000/cart/`, {
+    fetch(`http://158.160.23.164:3000/cart/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

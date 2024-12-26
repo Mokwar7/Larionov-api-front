@@ -92,7 +92,7 @@ function Register({ auth }) {
     e.preventDefault()
     setErrorCode('')
     setFormValid(false)
-    fetch('http://localhost:3000/signup', {
+    fetch('http://158.160.23.164:3000/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ function Register({ auth }) {
         return Promise.reject(`Ошибка: ${res.status}`);
       })
       .then((res) => {
-        fetch('http://localhost:3000/signin', {
+        fetch('http://158.160.23.164:3000/signin', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

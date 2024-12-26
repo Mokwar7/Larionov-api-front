@@ -70,7 +70,7 @@ function Card({ isLogged, cart, getCart, addToCart, removeCountFromCart, addCoun
 
 
     function onLoad() {
-        fetch(`http://localhost:3000/catalog/${location.pathname.split('/')[2]}`, {
+        fetch(`http://158.160.23.164:3000/catalog/${location.pathname.split('/')[2]}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

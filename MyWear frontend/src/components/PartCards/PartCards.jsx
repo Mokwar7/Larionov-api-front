@@ -8,7 +8,7 @@ function PartCards() {
     const [arrGoods, setArrGoods] = React.useState([])
 
     function onLoad() {
-        fetch('http://localhost:3000/catalog', {
+        fetch('http://158.160.23.164:3000/catalog', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
